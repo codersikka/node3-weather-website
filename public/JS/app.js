@@ -22,8 +22,7 @@ fetch('http://localhost:3000/weather?address='+ location+'').then((response)=>{
             }
          console.log(data)
          errorMessage.textContent= data.location
-         //resultsMessage.textContent=JSON.stringify().data.forecast
-         resultsMessage.textContent='Here are the forecast details. Humidity: ${data.forecast.humidity}.out' //Temperature: "+data.forecast.temperature+" degree celsius. Windspeed: "+data.forecast.windspeed+"."
+         resultsMessage.textContent="Here are the forecast details. Humidity: "+data.forecast.humidity+". Temperature: "+data.forecast.temperature+" degree celsius. Windspeed: "+data.forecast.windspeed+"."
          
         })
 })
