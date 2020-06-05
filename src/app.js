@@ -5,6 +5,7 @@ const geocode = require ('./utils/geocode.js')
 const forecast = require ('./utils/forecast.js')
 //asw
 const app = express()
+const port = process.env.PORT || 3000//port = environment value variable
 
 const publicdirectoryPath = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname,'../templates/views')
@@ -195,7 +196,7 @@ app.get('*',(req,res)=>{
         name: 'ARJ'
     })
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
-    console.log('The server has just started')
+    console.log('The server has just started'+ port)
 })
